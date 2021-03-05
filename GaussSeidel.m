@@ -10,11 +10,11 @@
 
 function x=GaussSeidel(A,b, es, maxit)
 
-    if nargin<2,error('Se necesitan almenos dos parametros'),end
+    if nargin<2,error('At least two parameters are required'),end
     if nargin<3||isempty(maxit), maxit=50;end
     if nargin<3||isempty (es), es=0.00001; end
     [m,n]=size(A); 
-    if m~=n, error('Matriz A tiene que ser cuadrada'); end
+    if m~=n, error('Matrix A has to be square'); end
     C=A;
 
     for i=1:n
